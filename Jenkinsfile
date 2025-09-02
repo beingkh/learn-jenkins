@@ -17,4 +17,15 @@ pipeline {
             }
         }
     }
+    post {
+        always{
+            echo " Build update: this section runs always"
+        }
+        success{
+            echo " Build Sucess: this section run when pipeline sucesss"
+        }
+        failure{
+            echo "build failed: this section run when pipeline failed"
+        }
+    }
 }
