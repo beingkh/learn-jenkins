@@ -16,13 +16,13 @@ pipeline {
         stage('Deploy') {
             steps{
                  sh 'echo this is Deploy'
-                 error 'pipeline failed'
             }
         }
     }
     post {
         always{
             echo " Build update: this section runs always"
+            deleteDir()
         }
         success{
             echo " Build Sucess: this section run when pipeline sucesss"
