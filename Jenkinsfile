@@ -1,10 +1,12 @@
 pipeline {
     agent {
-        label 'agent 1'
+        label 'agent-1'
     }
-    options{
-        timeout(time:10, unit: 'Seconds')
-    }
+    // options{
+    //     timeout(time:10, unit: 'Seconds')
+    //     disableCouncurrentBuild()
+    //     retry(1)
+    // }
     stages {
         stage('Build') {
             steps{
